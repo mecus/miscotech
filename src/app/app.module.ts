@@ -11,10 +11,10 @@ import { AppRouterModule } from './app.router';
 import { AuthModule } from './auth/auth.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './containers/home/home.component';
-import { environment } from '../environments/environment';
 import { AuthService } from './services/auth.service';
 import { AdminModule } from './admin/admin.module';
 import { AdminRouter } from './admin/admin.router';
+import { firebaseConfig } from '../firebase-config';
 
 
 
@@ -25,7 +25,7 @@ import { AdminRouter } from './admin/admin.router';
     HomeComponent
   ],
   imports: [
-    BrowserModule, AngularFireModule.initializeApp(environment.firebaseConfig, "miscotech"),
+    BrowserModule, AngularFireModule.initializeApp(firebaseConfig, "miscotech"),
     AngularFireAuthModule, AngularFirestoreModule,
     BrowserAnimationsModule, FormsModule, ReactiveFormsModule,
     MaterialsModule, RouterModule, AppRouterModule, AuthModule,
