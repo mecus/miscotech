@@ -1,0 +1,42 @@
+.login-container{
+    /* margin: 0; */
+    width: 100%;
+    height: 100vh;
+    background: #ffffff;
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/soular-7fa49.appspot.com/o/images%2Fpexels-photo-206796.jpeg?alt=media&token=f37594ad-3a76-48b6-89df-e532505018a2');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.login-container .login-wrapper{
+    display: flex;
+    justify-content: space-around;
+    /* background-color: grey; */
+    padding-top: 100px;
+    /* margin: 0 auto; */
+}
+mat-card{
+    height: 500px;
+    margin: 0px;
+    padding: 0px;
+}
+mat-card mat-card-header{
+    /* background-color: red; */
+    height: 40px;
+}
+mat-card mat-card-content h1{
+    font-size: 1.5rem;
+    margin: 0px;
+    line-height: 40px;
+    text-align: center;
+}
+mat-card mat-card-content{
+    padding: 5% 15%;
+}
+mat-card mat-card-content button {
+    width: 100%;
+    background-color: goldenrod;
+}
+.input-field{
+    width: 100%;
+    /* margin: 20px; */
+}

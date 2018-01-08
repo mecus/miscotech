@@ -1,0 +1,10 @@
+.admin-container{
+    display: flex;
+    
+}
+.admin-container .side{
+
+}
+.admin-container .main, .side{
+    margin-top: 60px;
+}

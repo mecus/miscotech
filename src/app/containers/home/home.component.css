@@ -1,0 +1,42 @@
+.page-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #374B4A;
+
+}
+.page-container .content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 200px; 
+    padding: 50px;
+    margin-top: -150px;
+    transform: translateX(-200px);
+    background-color: #526760;
+    text-align: center;
+
+}
+h1{
+    text-transform: uppercase;
+    color: #C5FFFD;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 2rem;
+}
+h2{
+    color: #C5FFFD;
+    font-size: 1.5rem;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+p{
+    color: #88D9E6;    
+    font-size: 1rem;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 100;
+    margin: 0px;
+}

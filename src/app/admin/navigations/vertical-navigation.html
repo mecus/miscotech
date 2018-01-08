@@ -1,0 +1,31 @@
+<div class="vertical-navigation">
+  <div class="side-nav">
+      <span class="nav-item">
+          <a routerLink="/admin/dashboard">Dashboard</a>
+          <mat-icon>keyboard_arrow_right</mat-icon>
+      </span>
+      <span class="nav-item">
+        <a (click)="customerOpen()" >Customers</a>
+        <mat-icon (click)="customerOpen()" id="openIcon1">keyboard_arrow_right</mat-icon>
+        <mat-icon (click)="customerOpen()" id="openIcon2">keyboard_arrow_down</mat-icon>
+      </span>
+      <div id="customer-actions" class="customer-actions">
+          <li>
+            <a routerLink="/admin/customers">Customers</a>
+          </li>
+          <li>
+            <a routerLink="/admin/customers/new">New</a>
+          </li>
+        </div>
+
+      <span class="nav-item">
+        <a  href="/admin">Payments</a>
+        <mat-icon>keyboard_arrow_right</mat-icon>
+      </span>
+      <span class="nav-item">
+        <a  href="/admin">Invoices</a>
+        <mat-icon>keyboard_arrow_right</mat-icon>
+      </span>
+    </div>
+</div>
+
