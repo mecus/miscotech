@@ -1,0 +1,10 @@
+div.service-container{
+    margin: 20px;
+}
+div.service-container .header{
+    display: flex;
+    justify-content: space-between;
+}
+div.service-inner{
+    width: 600px;
+}

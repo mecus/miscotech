@@ -15,6 +15,7 @@ import { AuthService } from './services/auth.service';
 import { AdminModule } from './admin/admin.module';
 import { AdminRouter } from './admin/admin.router';
 import { firebaseConfig } from '../firebase-config';
+import { AdminService } from './services/admin.service';
 
 
 
@@ -31,7 +32,7 @@ import { firebaseConfig } from '../firebase-config';
     MaterialsModule, RouterModule, AppRouterModule, AuthModule,
     AdminModule, AdminRouter
   ],
-  providers: [AuthService],
+  providers: [AuthService, AdminService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

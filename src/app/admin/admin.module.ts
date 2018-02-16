@@ -10,7 +10,9 @@ import { AdminRouter } from './admin.router';
 import { MaterialsModule } from '../share/materials/materials.module';
 import { NewCustomerComponent } from './customers-container/new-customer/new-customer.component';
 import { EditCustomerComponent } from './customers-container/edit-customer/edit-customer.component';
-
+import { ServicesComponent } from './services/services.component';
+import * as SERVICE from './services/serviceIndex';
+import * as SUB from './subsciptions/subIndex';
 
 @NgModule({
   imports: [
@@ -25,6 +27,9 @@ import { EditCustomerComponent } from './customers-container/edit-customer/edit-
 
     CUSTOMER.CustomersComponent, CUSTOMER.NewCustomerComponent,
     CUSTOMER.EditCustomerComponent,
+    SERVICE.ServicesComponent, SERVICE.NewServiceComponent, 
+    SUB.SubsciptionComponent, SUB.ListSubscriptions,
+    SUB.NewSubscription
   ]
 })
 export class AdminModule { }

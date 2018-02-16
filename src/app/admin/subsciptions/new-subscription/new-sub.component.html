@@ -1,0 +1,84 @@
+<div class="new-sub-container">
+    <h1>New Subscription</h1>
+</div>
+
+<div class="newSubscription">
+    <form [formGroup]="subModel" (ngSubmit)="subscribe(subModel.value)">
+        <div class="form-group">
+            <mat-form-field>
+                <mat-select formControlName="customer" placeholder="Select Customer">
+                    <mat-option value="Danny">
+                        Danny Taff
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <div class="form-group">
+            <mat-form-field>
+                <input  matInput placeholder="Customer Name">
+            </mat-form-field>
+            <mat-form-field>
+                <input formControlName="company" matInput placeholder="Company">
+            </mat-form-field>
+        </div>
+        <div class="form-group">
+            <mat-form-field>
+                <input formControlName="service" matInput placeholder="Service">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput formControlName="duration" placeholder="Duration">
+            </mat-form-field>
+        </div>
+        <div class="form-group">
+            <mat-form-field>
+                <input matInput formControlName="startDate"  [matDatepicker]="picker" placeholder="Start date">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+            <mat-form-field>
+                <input formControlName="endDate" matInput [matDatepicker]="picker2" placeholder="End date">
+                <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                <mat-datepicker #picker2></mat-datepicker>
+            </mat-form-field>
+        </div>
+        <div class="button">
+            <button mat-raised-button >Submit</button>
+        </div>
+        <!-- <div class="address">
+            <div class="form-group">
+                <mat-form-field>
+                <input matInput placeholder="Address 1">
+                </mat-form-field>
+                <mat-form-field>
+                <input matInput placeholder="Address 2">
+                </mat-form-field>
+            </div>
+            <div class="form-group">
+                <mat-form-field>
+                <input matInput placeholder="City">
+                </mat-form-field>
+                <mat-form-field>
+                <input matInput placeholder="Post Code">
+                </mat-form-field>
+            </div>
+            <div class="form-group">
+                <mat-form-field>
+                <input matInput placeholder="Country">
+                </mat-form-field>
+            </div>
+        </div>
+     -->
+        <!-- <mat-form-field>
+            <input matInput placeholder="Amount" type="number" class="example-right-align">
+            <span matPrefix>£&nbsp;</span>
+            <span matSuffix>.00</span>
+        </mat-form-field> -->
+        
+        <!-- <mat-form-field>
+            <mat-select placeholder="Select">
+            <mat-option value="option">Option</mat-option>
+            </mat-select>
+        </mat-form-field> -->
+        
+    </form>
+    </div>

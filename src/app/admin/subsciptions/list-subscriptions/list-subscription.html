@@ -1,0 +1,56 @@
+<div class="sub-container">
+    <div class="header">
+        <h1>Subscriptions</h1>
+        <a routerLink="/admin/subscription/new">New Subscription</a>
+    </div>
+
+    <div class="sub-inner mat-elevation-z2">
+        <mat-table #table [dataSource]="dataSource">
+        
+            <!--- Note that these columns can be defined in any order.
+                The actual rendered columns are set as a property on the row definition" -->
+        
+            <ng-container matColumnDef="account">
+                <mat-header-cell *matHeaderCellDef> ACCOUNT NO </mat-header-cell>
+                <mat-cell *matCellDef="let sub"> {{sub.accountNo}} </mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="customer">
+            <mat-header-cell *matHeaderCellDef> CUSTOMER </mat-header-cell>
+            <mat-cell *matCellDef="let sub"> {{sub.customer}}</mat-cell>
+            </ng-container>
+        
+            <!-- Name Column -->
+            <ng-container matColumnDef="company">
+            <mat-header-cell *matHeaderCellDef> COMPANY </mat-header-cell>
+            <mat-cell *matCellDef="let sub"> {{sub.company}} </mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="service">
+                <mat-header-cell *matHeaderCellDef> SERVICE </mat-header-cell>
+                <mat-cell *matCellDef="let sub"> {{sub.service}} </mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="amount">
+                <mat-header-cell *matHeaderCellDef> AMOUNT </mat-header-cell>
+                <mat-cell *matCellDef="let sub"> {{sub.amount | currency: 'GBP': 'symbol'}} </mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="duration">
+                <mat-header-cell *matHeaderCellDef> DURATION </mat-header-cell>
+                <mat-cell *matCellDef="let sub"> {{sub.duration}} </mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="start">
+                <mat-header-cell *matHeaderCellDef> START DATE </mat-header-cell>
+                <mat-cell *matCellDef="let sub"> {{sub.startDate}} </mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="end">
+                <mat-header-cell *matHeaderCellDef> END DATE </mat-header-cell>
+                <mat-cell *matCellDef="let sub"> {{sub.endDate}} </mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="status">
+                <mat-header-cell *matHeaderCellDef> STATUS </mat-header-cell>
+                <mat-cell *matCellDef="let sub"> {{sub.status}} </mat-cell>
+                </ng-container>
+        
+            <mat-header-row *matHeaderRowDef="columnDisplay"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: columnDisplay;"></mat-row>
+        </mat-table>
+    </div>
+</div>

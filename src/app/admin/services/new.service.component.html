@@ -1,0 +1,21 @@
+<div class="new-service-container">
+    <h1>New Service</h1>
+
+    <form novalidate [formGroup]="serviceModel" (ngSubmit)="saveService(serviceModel.value)">
+        <div class="form-group">
+        <mat-form-field>
+            <input matInput formControlName="name" placeholder="Service Name">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-select formControlName="type" placeholder="Service Type">
+                <mat-option *ngFor="let type of serviceType" [value]="type.name">
+                {{ type.name }}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        </div>
+        <div class="button">
+            <button mat-raised-button>Submit</button>
+        </div>
+    </form>
+</div>

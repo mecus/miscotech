@@ -1,32 +1,49 @@
 
 <div class="customer-container">
-  <!-- <div class="example-header">
-    <mat-form-field floatPlaceholder="never">
-      <input mdInput placeholder="Filter Customers">
-    </mat-form-field>
-  </div> -->
-  <!-- <mat-table>
-      <ng-container matColumnDef="userName">
-          <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
-          <mat-cell *matCellDef="let user"> {{user.name}} </mat-cell>
-        </ng-container>
+  <div class="header">
+    <h1>Customers</h1>
+  </div>
 
-  </mat-table> -->
-
-  <table>
-    <thead>
-      <tr>
-        <th>Customer Name</th>
-        <th>Email</th>
-        <th>Telephone</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Johnson Noal</td>
-        <td>john@gmail.com</td>
-        <td>0789745662562</td>
-      </tr>
-    </tbody>
-  </table>
+  <div class="service-inner mat-elevation-z2">
+    <mat-table #table [dataSource]="dataSource">
+  
+      <!--- Note that these columns can be defined in any order.
+            The actual rendered columns are set as a property on the row definition" -->
+  
+      <ng-container matColumnDef="number">
+          <mat-header-cell *matHeaderCellDef> ACCOUNT NO </mat-header-cell>
+          <mat-cell *matCellDef="let customer"> {{customer.accountNo}} </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="name">
+        <mat-header-cell *matHeaderCellDef> NAME </mat-header-cell>
+        <mat-cell *matCellDef="let customer"> {{customer.firstName}} {{customer.lastName}}</mat-cell>
+      </ng-container>
+  
+      <!-- Name Column -->
+      <ng-container matColumnDef="company">
+        <mat-header-cell *matHeaderCellDef> COMPANY </mat-header-cell>
+        <mat-cell *matCellDef="let customer"> {{customer.company}} </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="email">
+          <mat-header-cell *matHeaderCellDef> EMAIL </mat-header-cell>
+          <mat-cell *matCellDef="let customer"> {{customer.email}} </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="phone">
+          <mat-header-cell *matHeaderCellDef> PHONE </mat-header-cell>
+          <mat-cell *matCellDef="let customer"> {{customer.phoneNumber}} </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="postcode">
+          <mat-header-cell *matHeaderCellDef> POST CODE </mat-header-cell>
+          <mat-cell *matCellDef="let customer"> {{customer.address.postCode}} </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="balance">
+          <mat-header-cell *matHeaderCellDef> BALANCE </mat-header-cell>
+          <mat-cell *matCellDef="let customer"> {{customer.balance | currency: 'GBP': 'symbol'}} </mat-cell>
+      </ng-container>
+  
+  
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+  </div>
 </div>
